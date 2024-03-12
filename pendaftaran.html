@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Halaman Beranda Diaz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Diaz">
+    <meta name="nim" content="233307043">
+  </head>
+  <style>
+    *{
+         box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }   
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300%;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media(max-width: 600px){
+        nav,article {
+            width: 100%;
+            height:auto;
+        }
+        }
+        .file-upload {
+            display: inline-block;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .file-upload:hover {
+            background-color: #e0e0e0;
+        }
+        input[type="file"] {
+            display: none;
+        }
+         #content {
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid #ccc; 
+            padding: 5px; 
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        legend {
+            padding: 0 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Website Diaz</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>Form Penjadwal Pertemuan</h1>
+                <div id="content">
+                    <form action="proses.php" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Informasi Pribadi</legend>
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" required><br><br>
+    
+                            <label for="no_telpon">No. Telepon</label>
+                            <input type="tel" id="no_telpon" name="no_telpon" pattern="[0-9]{10,12}" required><br><br>
+    
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" required><br><br>
+    
+                            <label for="tanggal_lahir">Tanggal lahir:</label>
+                            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required><br><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Permintaan Pertemuan</legend>
+                            <label for="tujuan">Tujuan Pertemuan</label>
+                            <input type="text" id="tujuan" name="tujuan" required><br><br>
+    
+                            <label for="vol">Tingkat Kepentingan Pertemuan</label>
+                            <input type="range" id="vol" name="vol" min="0" max="10" required><br><br>
+    
+                            <label for="tanggal">Tanggal</label>
+                            <input type="date" id="tanggal" name="tanggal" required><br><br>
+    
+                            <label for="appt">Waktu</label>
+                            <input type="time" id="appt" name="appt" required><br><br>
+                        </fieldset><br><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <p>Kesimpulan: kode tersebut menampilkan formulir yang dapat digunakan oleh pengguna untuk mengajukan permintaan penjadwalan pertemuan. </p>
+            </article>
+        </section>
+        <footer>
+            <p>copyright @diaz_233307043</p>
+        </footer>
+    </body>
+</html>
