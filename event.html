@@ -56,6 +56,13 @@
                 height: auto;
             }
         }
+        img {
+            transition: transform 0.3s; 
+        }
+
+        img:hover {
+            transform: scale(1.1); 
+        }
     </style>
     <body>
         <header>
@@ -81,6 +88,19 @@
             <img src="gambar/gambar4.jpg" width="250px" height="150" onmousemove="alert('d')"/>
             <img src="gambar/gambar5.jpg" width="250px" height="150" onmouseout="alert('e')"/>
             <img src="gambar/gambar6.jpg" width="250px" height="150" onmouseover="alert('f')"/>
+            <script>
+                const images = document.querySelectorAll('img'); 
+        
+                images.forEach(img => {
+                    img.addEventListener('mouseover', () => {
+                        img.style.transform = 'scale(1.1)';
+                    });
+        
+                    img.addEventListener('mouseout', () => {
+                        img.style.transform = 'scale(1)';
+                    });
+                });
+                </script>
             <p>Kesimpulan: kode ini membangun struktur dasar untuk menampilkan koleksi gambar pada halaman "Event" serta menambahkan event Javascript untuk berinteraksi dengan gambar tersebut.<br>
                 Klik sekali (single click) memunculkan alert "a"<br>
                 Klik dua kali (double click) memunculkan alert "b"<br>
